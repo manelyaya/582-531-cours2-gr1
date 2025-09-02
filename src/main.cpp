@@ -18,13 +18,18 @@ void loop() {
   Serial.println();
   delay(100);
 
+  int rouge = maLectureAnalogique*255 / 4095;
+  monPixel = CRGB (rouge,0,0); 
+  FastLED.show();
 
-  if (maLectureAnalogique > 2000) {
+
+
+  /*if (maLectureAnalogique > 2000) {
     FastLED.show(true);
     monPixel = CRGB(193, 84, 255);
   } else {
     FastLED.clear(true);
-  }
+  }*/
 
 
 
